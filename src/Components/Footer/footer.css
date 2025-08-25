@@ -1,0 +1,26 @@
+Infinite Gradient Border Animation
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 6s ease infinite;
+}
+
+/* Glowing aura & floating particles */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.7; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+}
+.glow-particle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(12px);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll parallax glow effect */
+[data-parallax] {
+  transition: transform 0.2s ease-out;
+}

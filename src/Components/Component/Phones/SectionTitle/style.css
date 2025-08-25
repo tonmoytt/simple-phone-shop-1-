@@ -1,0 +1,8 @@
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -50% 0; }
+}
+@keyframes twinkle {
+  0%,100% { transform: scale(0.9) rotate(0deg); opacity: .7; }
+  50% { transform: scale(1.15) rotate(10deg); opacity: 1; }
+}
