@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SectionTitle from './../../../Phones/SectionTitle/SectionTitle'
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const FashionPage = () => {
   const [items, setItems] = useState([]);
@@ -79,17 +80,17 @@ const FashionPage = () => {
   }, []);
 
   const topSections = [
-    { title: "Latest Gadgets", desc: "Explore the newest electronics released this year.", img: "https://i.ibb.co/8c1TQpF/gadget.png", gradient: "bg-gradient-to-br from-indigo-400 via-indigo-200 to-indigo-100" },
-    { title: "Top Brands", desc: "From Apple to Samsung, choose the best for your needs.", img: "https://i.ibb.co/9r1LJZP/brand.png", gradient: "bg-gradient-to-br from-purple-400 via-purple-200 to-purple-100" },
-    { title: "Best Deals", desc: "Grab limited-time offers and discounts on popular items.", img: "https://i.ibb.co/FzG7nZL/deals.png", gradient: "bg-gradient-to-br from-pink-400 via-pink-200 to-pink-100" },
-    { title: "Customer Support", desc: "Reliable service and warranty assistance at your fingertips.", img: "https://i.ibb.co/W2vHkVx/support.png", gradient: "bg-gradient-to-br from-green-400 via-green-200 to-green-100" },
+    { title: "Latest Gadgets", desc: "Explore the newest electronics released this year.", img: "https://i.ibb.co.com/DHFbKZwf/ppppppppppppppp.png", gradient: "bg-gradient-to-br from-indigo-400 via-indigo-200 to-indigo-100" },
+    { title: "Top Brands", desc: "From Apple to Samsung, choose the best for your needs.", img: "https://i.ibb.co.com/zWZ46w03/tttttttttttt.png", gradient: "bg-gradient-to-br from-purple-400 via-purple-200 to-purple-100" },
+    { title: "Best Deals", desc: "Grab limited-time offers and discounts on popular items.", img: "https://i.ibb.co.com/Y5FRxzt/ttttttttttttttttttttttttt.png", gradient: "bg-gradient-to-br from-pink-400 via-pink-200 to-pink-100" },
+    { title: "Customer Support", desc: "Reliable service and warranty assistance at your fingertips.", img: "https://i.ibb.co.com/vxqj1GR7/support.png", gradient: "bg-gradient-to-br from-green-400 via-green-200 to-green-100" },
   ];
 
   const bottomSections = [
-    { title: "Quality Assurance", desc: "All electronics are verified and tested before shipping.", img: "https://i.ibb.co/2g9J1hN/quality.png", gradient: "bg-gradient-to-br from-indigo-400 via-indigo-200 to-indigo-100" },
-    { title: "Free Shipping", desc: "Enjoy free shipping on orders over $100.", img: "https://i.ibb.co/T2wCwL7/shipping.png", gradient: "bg-gradient-to-br from-purple-400 via-purple-200 to-purple-100" },
-    { title: "Easy Returns", desc: "Hassle-free returns within 30 days of purchase.", img: "https://i.ibb.co/hX6fR1h/returns.png", gradient: "bg-gradient-to-br from-pink-400 via-pink-200 to-pink-100" },
-    { title: "Exclusive Offers", desc: "Sign up to receive members-only deals and promotions.", img: "https://i.ibb.co/1nW6GpH/offers.png", gradient: "bg-gradient-to-br from-green-400 via-green-200 to-green-100" },
+    { title: "Quality Assurance", desc: "All electronics are verified and tested before shipping.", img: "https://i.ibb.co.com/yn2f3y8p/Quality-Assurance-Transparent-Images.png", gradient: "bg-gradient-to-br from-indigo-400 via-indigo-200 to-indigo-100" },
+    { title: "Free Shipping", desc: "Enjoy free shipping on orders over $100.", img: "https://i.ibb.co.com/0pbFhcqV/fre.png", gradient: "bg-gradient-to-br from-purple-400 via-purple-200 to-purple-100" },
+    { title: "Easy Returns", desc: "Hassle-free returns within 30 days of purchase.", img: "https://i.ibb.co.com/Dx1j2RR/return.png", gradient: "bg-gradient-to-br from-pink-400 via-pink-200 to-pink-100" },
+    { title: "Exclusive Offers", desc: "Sign up to receive members-only deals and promotions.", img: "https://i.ibb.co.com/4nW8WqWC/exlutive.png", gradient: "bg-gradient-to-br from-green-400 via-green-200 to-green-100" },
   ];
 
   return (
@@ -102,15 +103,38 @@ const FashionPage = () => {
       ))}
 
       {/* Top Sections */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8 relative z-10">
-        {topSections.map((section, idx) => (
-          <div key={idx} className={`${section.gradient} p-6 rounded-3xl shadow-2xl flex flex-col items-center text-center transform transition-all hover:-translate-y-3 hover:scale-105 hover:shadow-3xl`}>
-            <img src={section.img} alt={section.title} className="w-20 h-20 mb-4" />
-            <h3 className="font-bold text-xl text-gray-800">{section.title}</h3>
-            <p className="text-gray-700 mt-2">{section.desc}</p>
-          </div>
-        ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-14 relative z-10 px-4">
+  {topSections.map((section, idx) => (
+    <div
+      key={idx}
+      className="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 p-8 flex flex-col items-center text-center"
+    >
+      {/* Icon Wrapper */}
+      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-md mb-6 transform transition-all duration-500 group-hover:scale-110">
+        <img
+          src={section.img}
+          alt={section.title}
+          className="w-12 h-12 object-contain"
+        />
       </div>
+
+      {/* Title */}
+      <h3 className="text-xl font-extrabold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+        {section.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-gray-600 text-base leading-relaxed">
+        {section.desc}
+      </p>
+
+      {/* Glow Animation on Hover */}
+      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-purple-400/20 via-pink-400/20 to-purple-400/20 blur-2xl"></div>
+    </div>
+  ))}
+</div>
+
+
 
       <SectionTitle text="Top Electronics for You" />
 
@@ -174,15 +198,43 @@ const FashionPage = () => {
       ))}
 
       {/* Bottom Sections */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-12 relative z-10">
-        {bottomSections.map((section, idx) => (
-          <div key={idx} className={`${section.gradient} p-6 rounded-3xl shadow-2xl flex flex-col items-center text-center transform transition-all hover:-translate-y-3 hover:scale-105 hover:shadow-3xl`}>
-            <img src={section.img} alt={section.title} className="w-20 h-20 mb-4" />
-            <h3 className="font-bold text-xl text-gray-800">{section.title}</h3>
-            <p className="text-gray-700 mt-2">{section.desc}</p>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16 px-4">
+      {bottomSections.map((section, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.15 }}
+          whileHover={{ scale: 1.05 }}
+          className="relative bg-white dark:bg-gray-900 rounded-[30px] shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden group transition-all duration-500"
+        >
+          {/* Decorative Shape */}
+          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-bl-[50%] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
+
+          {/* Content */}
+          <div className="relative p-8 flex flex-col items-center text-center z-10">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center mb-6 shadow-md">
+              <img
+                src={section.img}
+                alt={section.title}
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              {section.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              {section.desc}
+            </p>
           </div>
-        ))}
-      </div>
+
+          {/* Animated Glow Border */}
+          <div className="absolute inset-0 rounded-[30px] border-2 border-transparent group-hover:border-transparent">
+            <div className="absolute inset-0 rounded-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 animate-borderGlow"></div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
     </div>
   );
 };

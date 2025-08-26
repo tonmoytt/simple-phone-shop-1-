@@ -64,10 +64,10 @@ const Footer = () => {
           <ul className="space-x-2 text-gray-400 text-sm flex ">
             {[
               { name: "Home", path: "/" },
-              { name: "About", path: "/about" },
-              { name: "Shop", path: "/shop" },
+              { name: "About", path: "/fashion" },
+              { name: "Shop", path: "/offers" },
               { name: "Contact", path: "/contact" },
-              { name: "Blog", path: "/blog" },
+              { name: "Blog", },
               { name: "FAQ", path: "/faq" },
             ].map((link, i) => (
               <li key={i}>

@@ -228,7 +228,7 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
             <div
               className="
         group relative flex items-center justify-center
-        px-5 md:px-6 py-2 md:py-3
+       
         rounded-full
         bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
         text-white font-semibold text-sm md:text-base
@@ -258,9 +258,9 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
               {/* Button Text */}
 
               {
-                user ? <button onClick={handleLogout}><span className="relative z-10 cursor-pointer">Signout</span> </button>
+                user ? <button onClick={handleLogout}><span className="relative z-10 cursor-pointer  px-5 md:px-6 py-2 md:py-3">Signout</span> </button>
                   :
-                  <Link to='/signup'> <span className="relative z-10">Register</span> </Link>
+                  <Link to='/signup'> <button className="relative z-10  px-5 md:px-6 py-2 md:py-2">Register</button> </Link>
               }
 
 
@@ -274,7 +274,7 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
           {/* Hamburger */}
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
-            className="md:hidden text-xl"
+            className="md:hidden text-md ml-2"
           >
             {mobileMenu ? <FaTimes /> : <FaBars />}
           </button>
@@ -297,7 +297,7 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
               <div className="flex items-center gap-4">
                 {/* Cart */}
                 <Link to='/dashboard'  onClick={() => setMobileMenu(false)}> <div className="relative cursor-pointer">
-                  <FaShoppingCart className="text-indigo-600 text-xl" />
+                  <FaShoppingCart className="text-indigo-600 text-lg" />
                   {cartCount > 0 && (
                     <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-bounce">
                       {cartCount}
@@ -308,7 +308,7 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
 
                 <Link to='/dashboard'   onClick={() => setMobileMenu(false)}>      {/* Wishlist */}
                   <div className="relative cursor-pointer">
-                    <FaHeart className="text-pink-500 text-xl" />
+                    <FaHeart className="text-pink-500 text-lg" />
                     {Wishlist > 0 && (
                       <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-bounce">
                         {Wishlist}
@@ -319,7 +319,7 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
                 {/* Close Button */}
                 <button
                   onClick={() => setMobileMenu(false)}
-                  className="text-3xl text-gray-700 hover:text-red-500 transition"
+                  className="text-2xl text-gray-700 hover:text-red-500 transition"
                 >
                   <FaTimes />
                 </button>
@@ -444,7 +444,7 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
                 <div
                   className="
       group relative flex items-center justify-center
-      w-full px-5 py-2 rounded-full
+      w-full  rounded-full
       bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
       text-white font-semibold text-sm
       shadow-md
@@ -474,9 +474,9 @@ const Navbar = ({ cartCount = 0, Wishlist = 0 }) => {
                   {/* Button Text */}
 
                   {
-                    user ? <button onClick={handleLogout}><span className="relative z-10 cursor-pointer">Signout</span> </button>
+                    user ? <button className="relative z-10 cursor-pointer  w-full px-5 py-2" onClick={handleLogout}>"Signout </button>
                       :
-                      <Link to='/signup'> <span className="relative z-10">Register</span> </Link>
+                      <Link to='/signup'> <button className="relative z-10  w-full px-5 py-2">Register</button> </Link>
                   }
 
                 </div>

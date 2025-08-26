@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Root = () => {
   // ---------------------- Cart State ----------------------
@@ -125,6 +126,15 @@ const Root = () => {
           Handledeleteditems,
         }}
       />
+      <a
+              href="https://wa.me/01784972403"
+              target="_blank"
+              rel="noopener noreferrer"
+              title='Live chat'
+              className="fixed z-30 bottom-3 md:bottom-5 right-2 bg-green-500 md:p-3 rounded-full shadow-lg hover:bg-green-600 transition "
+            >
+              <FaWhatsapp className="text-white text-3xl md:text-2xl" />
+            </a>
 
       <Footer />
     </div>

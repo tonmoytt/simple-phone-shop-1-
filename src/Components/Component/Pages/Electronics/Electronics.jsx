@@ -35,7 +35,7 @@ const SaleCard = () => (
     initial={{ opacity: 0, scale: 0.95 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.6 }}
-    className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-white via-orange-50 to-orange-100 shadow-md border p-6 md:p-10"
+    className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-white via-orange-50 to-orange-100 shadow-md  p-6 md:p-10"
   >
     <div className="absolute -left-20 -top-20 w-52 md:w-72 h-52 md:h-72 bg-orange-400/20 rounded-full blur-3xl" />
     <div className="absolute -right-10 top-24 w-32 md:w-40 h-32 md:h-40 bg-amber-300/30 rounded-full blur-2xl" />

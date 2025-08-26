@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaEnvelope, FaPho
 
 const ContactusPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="mt-10 md:mt-20 bg-gray-100 min-h-screen">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-16">
         <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
@@ -67,7 +67,7 @@ const ContactusPage = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/8801234567890"
+        href="https://wa.me/01784972403"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition"

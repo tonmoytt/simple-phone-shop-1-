@@ -88,7 +88,7 @@ const Dashboard = () => {
                       <p className="text-gray-500">Price: ${item.price}</p>
                       <p className="text-lg font-bold mt-1 text-green-600">Total: ${totalPrice}</p>
 
-                      <div className="flex items-center gap-3 mt-4 ml-[70px] md:ml-[120px] ">
+                      <div className="flex items-center justify-center gap-3 mt-4  ">
                         <button className="btn btn-outline btn-sm" onClick={() => handleDecrease(item.id)}>
                           <FaMinus />
                         </button>
@@ -135,7 +135,7 @@ const Dashboard = () => {
                       <p className="text-gray-500">Price: ${item.price}</p>
                       <p className="text-lg font-bold mt-1 text-green-600">Total: ${totalPrice}</p>
 
-                      <div className="flex items-center gap-3 mt-4 ml-[70px] md:ml-[120px]">
+                      <div className="flex items-center justify-center gap-3 mt-4 ">
                         <button className="btn btn-outline btn-sm" onClick={() => handleWishlistDecrease(item.id)}>
                           <FaMinus />
                         </button>
