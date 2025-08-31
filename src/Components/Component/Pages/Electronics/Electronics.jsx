@@ -81,12 +81,12 @@ export default function GshopStyleLanding() {
 
   return (
     <div className="pt-10 min-h-screen bg-gradient-to-r from-white via-orange-50 to-orange-100">
-      <div className="max-w-8xl mx-auto px-2">
+      <div className="max-w-8xl mx-auto ">
 
         {/* Banner Section */}
-        <motion.section variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="py-10 md:py-16">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-white via-orange-50 to-orange-100 shadow-sm p-6 md:p-10">
-            <div className="absolute -right-24 -top-24 w-52 md:w-80 h-52 md:h-80 bg-orange-400/20 rounded-full blur-3xl" />
+        <motion.section variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="py-10 md:py-10">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-white via-orange-50 to-orange-100  p-6 md:p-10">
+            <div className="absolute -right-24 -top-24 w-52 md:w-80 h-52 md:h-80 bg-orange-400/20 rounded-full " />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center relative z-10">
               <motion.div initial={{ x: -50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.7 }}>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
@@ -95,7 +95,7 @@ export default function GshopStyleLanding() {
                 <p className="text-gray-600 mb-8">
                   The stylish smartwatches available to consumers are endless and perfect for workouts.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <button className="px-5 py-3 rounded-xl bg-orange-500 text-white font-semibold shadow hover:bg-orange-600 transition w-full sm:w-auto">
                     Add to cart
                   </button>
@@ -142,7 +142,7 @@ export default function GshopStyleLanding() {
             >
               {card.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <div className="bg-gradient-to-r from-white via-orange-50 to-orange-100 p-6 rounded-2xl shadow-sm border grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+                  <div className="bg-gradient-to-r from-white via-orange-50 to-orange-100 p-6 rounded-2xl shadow-sm  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
                     {/* Left */}
                     <div className="text-center md:text-left md:ml-20">
                       <h3 className="text-xl font-bold mb-2">{item.name}</h3>

@@ -105,7 +105,7 @@ const Deals = () => {
     , [deals, featFilter, search]);
 
   return (
-    <div className="mt-24 min-h-screen bg-white">
+    <div className="mt-20 min-h-screen bg-white">
 
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400">

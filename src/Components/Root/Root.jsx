@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Root = () => {
+  const location = useLocation(); // location hook
+  const hideFooterPaths = ['/login', '/signup']; // যেসব path এ footer hide হবে
+
   // ---------------------- Cart State ----------------------
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
 
   const handleAddToCart = (item) => {
     const isAlreadyAdded = cartItems.some(cart => cart.id === item.id);
-
     if (isAlreadyAdded) {
       Swal.fire({
         icon: 'error',
@@ -22,7 +24,6 @@ const Root = () => {
       });
       return;
     }
-
     setCartItems(prev => [...prev, item]);
     setCartCount(prev => prev + 1);
     Swal.fire({
@@ -65,7 +66,6 @@ const Root = () => {
 
   const Handlewishcount = (item) => {
     const isWishlisted = Showdashboard.some(wish => wish.id === item.id);
-
     if (isWishlisted) {
       Swal.fire({
         icon: 'error',
@@ -74,7 +74,6 @@ const Root = () => {
       });
       return;
     }
-
     setshowdashboard(prev => [...prev, item]);
     setwithlist(prev => prev + 1);
     Swal.fire({
@@ -126,17 +125,19 @@ const Root = () => {
           Handledeleteditems,
         }}
       />
-      <a
-              href="https://wa.me/01784972403"
-              target="_blank"
-              rel="noopener noreferrer"
-              title='Live chat'
-              className="fixed z-30 bottom-3 md:bottom-5 right-2 bg-green-500 md:p-3 rounded-full shadow-lg hover:bg-green-600 transition "
-            >
-              <FaWhatsapp className="text-white text-3xl md:text-2xl" />
-            </a>
 
-      <Footer />
+      <a
+        href="https://wa.me/01784972403"
+        target="_blank"
+        rel="noopener noreferrer"
+        title='Live chat'
+        className="fixed z-30 bottom-3 md:bottom-5 right-2 bg-green-500 md:p-3 rounded-full shadow-lg hover:bg-green-600 transition "
+      >
+        <FaWhatsapp className="text-white text-3xl md:text-2xl" />
+      </a>
+
+      {/* Footer hide for login/signup */}
+      {!hideFooterPaths.includes(location.pathname) && <Footer />}
     </div>
   );
 };
